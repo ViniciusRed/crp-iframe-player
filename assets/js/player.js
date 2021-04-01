@@ -12,7 +12,7 @@ window.addEventListener("message", async e => {
 
 	// Variáveis principais
 	const promises=[], request = [], s = [];
-	const r = { 0: '1080p', 1: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
+	const r = { 1: '1080p', 0: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
 	for (let i in r) promises[i] = new Promise((resolve, reject) => request[i] = { resolve, reject });
 
 	let rgx = /http.*$/gm;
@@ -328,7 +328,7 @@ works = [1, 3, 8, 9];
 works = [1, 6, 7, 8]
 //lookup(streams[1].url)
 
-const r = { 0: '1080p', 1: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
+const r = { 1: '1080p', 0: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
 
 let curfs = 0;
 function lookup(current_url) {
