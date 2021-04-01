@@ -12,7 +12,7 @@ window.addEventListener("message", async e => {
 
 	// Variáveis principais
 	const promises=[], request = [], s = [];
-	const r = { 1: '1080p', 0: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
+	const r = { 0: '720p', 1: '1080p', 2: '480p', 3: '360p' , 4: '240p' , };
 	for (let i in r) promises[i] = new Promise((resolve, reject) => request[i] = { resolve, reject });
 
 	let rgx = /http.*$/gm;
@@ -99,7 +99,7 @@ window.addEventListener("message", async e => {
 
 	// Carregar player assim que encontrar as URLs dos m3u8.
 	Promise.all(promises).then(() => {
-		for (let idx of [1, 0, 2, 3, 4, 5])
+		for (let idx of [1, 0, 2, 3, 4])
 			sources.push({ file: video_m3u8_array[idx], label: r[idx] + (idx<2 ? '<sup><sup>HD</sup></sup>' : '')});
 		startPlayer();
 	});
@@ -328,7 +328,7 @@ works = [1, 3, 8, 9];
 works = [1, 6, 7, 8]
 //lookup(streams[1].url)
 
-const r = { 1: '1080p', 0: '1440p', 2: '720p', 3: '480p', 4: '360p' , 5: '240p' , };
+const r = { 0: '720p', 1: '1080p', 2: '480p', 3: '360p' , 4: '240p' , };
 
 let curfs = 0;
 function lookup(current_url) {
