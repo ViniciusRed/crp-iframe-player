@@ -308,16 +308,16 @@ for (let s of streams)
             .replace("pl.crunchyroll.com", "dl.v.vrv.co")
             .replace("dl.v.vrv.co", "v.vrv.co")
             .replace("master.m3u8", "manifest.mpd")
-            .replace("evs1", "evs")
+            .replace("evs1", "evs3", "evs")
             .replace('assets/8', 'assets/p/8')
         manifest = remakeUrl(s.url)
             .replace("master.m3u8", "manifest.mpd")
             //.replace('assets/p/', 'assets/')
-        // AAA.replace("master.m3u8", "manifest.mpd").replace(AAA.split("/")[2], "dl.v.vrv.co").replace("evs1", "evs");
+        // AAA.replace("master.m3u8", "manifest.mpd").replace(AAA.split("/")[2], "dl.v.vrv.co").replace("evs1", "evs3", "evs");
         mafinest = s.url
             .replace("v.vrv.co", "dl.v.vrv.co")
             .replace("master.m3u8", "manifest.mpd")
-            .replace("evs1", "evs")
+            .replace("evs1", "evs3", "evs")
 
          //lookup(s.url);
     }
